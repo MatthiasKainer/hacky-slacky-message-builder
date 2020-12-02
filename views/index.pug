@@ -1,0 +1,31 @@
+html
+  head
+    title= title
+    script(src="./s.js")
+    link(rel="stylesheet",href="s.css")
+  body
+    h1 Slack Block Message Sender
+    h2 Getting your token
+    p 
+        | It's easyish! Open and sign into the slack customization page, e.g. 
+        a(href="https://my.slack.com/customize") https://my.slack.com/customize
+        |, right click anywhere, inspect element. Open the console and paste:
+    blockquote 
+        code window.prompt("your api token is: ", TS.boot_data.api_token)
+    h2 Creating the message
+    p Oh, it's easyish too, even less so! Goto 
+        a(href="https://app.slack.com/block-kit-builder") https://app.slack.com/block-kit-builder 
+        | and try to learn the JSON syntax/builder thingy there. Then click on "Copy Payload" and paste it in here
+
+    form(method="POST", action="/")
+        div
+            input(placeholder="channel", name="channel")
+        div
+            input(placeholder="token", name="token")
+        div
+            input(placeholder="display as notification (will be shown in the notification popup)", name="text")
+        div
+            textarea(name="blocks", placeholder="The blocks field (that's the content that will be shown in the message)", cols="60", rows="30")
+        div
+            input(type="submit", value="submit (that's the button which submits the thing. click it carefully!)")
+        div= message

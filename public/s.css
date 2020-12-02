@@ -1,0 +1,7 @@
+form div {
+    width: 80%;
+    margin: 5px auto;
+}
+form input, form textarea {
+    width: 100%;
+}

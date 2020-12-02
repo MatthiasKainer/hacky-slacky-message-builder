@@ -1,0 +1,16 @@
+{
+  "name": "hacky-slacky-message-builder",
+  "version": "1.0.0",
+  "description": "A very prototypish application to enable me to send some half-automated slack messages using blocks.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "mkainer",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  }
+}
